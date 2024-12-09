@@ -1,0 +1,114 @@
+.home-bg {
+    background: linear-gradient(to right, #360033, #0b8793);
+}
+
+.title {
+    color: #FFD700;
+    margin-bottom: 4rem;
+}
+
+.content {
+    color: #F5F5DC;
+    font-size: 2rem;
+}
+
+@keyframes rotateAndBounce {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateAndBounceRight {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.rotate-and-bounce {
+    animation: rotateAndBounce 2s infinite;
+}
+
+.rotate-and-bounce-right {
+    animation: rotateAndBounceRight 2s infinite;
+}
+
+.question-left {
+    position: absolute;
+    left: -7rem;
+    top: 0;
+}
+
+.question-right {
+    position: absolute;
+    right: -7rem;
+    top: 3rem;
+}
+
+.party-left {
+    position: absolute;
+    left: -15rem;
+    top: 0;
+}
+
+.party-right {
+    position: absolute;
+    right: -15rem;
+    top: 0;
+}
+
+.name {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+}
+
+.select-player {
+    cursor: pointer;
+}
+
+.select-player:hover {
+    background-color: #eee;
+}
+
+.loading-content {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .question-left {
+        height: 4rem;
+        width: 4rem;
+        left: -3rem;
+    }
+
+    .question-right {
+        height: 4rem;
+        width: 4rem;
+        right: -2rem;
+        top: 5rem;
+    }
+
+    .party-left {
+        height: 4rem;
+        width: 4rem;
+        left: -2rem;
+        top: 0;
+    }
+
+    .party-right {
+        height: 4rem;
+        width: 4rem;
+        right: -2rem;
+        top: 0;
+    }
+}
