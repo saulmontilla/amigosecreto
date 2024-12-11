@@ -1,0 +1,55 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "/api/index.php",
+            "use": "vercel-php@0.7.3"
+        },
+        {
+            "src": "/public/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(css|js)/(.*)",
+            "dest": "public/$1/$2"
+        },
+        {
+            "src": "/build/assets/(.*)",
+            "dest": "public/build/assets/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Amigo Screto App",
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://amigosecreto-qy46ug51v-saulmontillas-projects.vercel.app",
+        "VERCEL_DEMO_MODE": "true",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "database",
+        "SESSION_LIFETIME": "120",
+        "SESSION_ENCRYPT": "false",
+        "SESSION_PATH": "/",
+        "SESSION_DOMAIN": "null",
+        "VIEW_COMPILED_PATH": "/tmp/views",
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node",
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "junction.proxy.rlwy.net:57701",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "railway",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "hdlQxKngEyuTaLwLGLLZeZdyzNqNPHOW"
+    }
+}
