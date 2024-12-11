@@ -34,6 +34,10 @@ export default function PlayersPreview() {
     }, [])
 
     function handleClick() {
+        if (loading) {
+            return
+        }
+
         setLoading(true)
 
         setTimeout(() => {
